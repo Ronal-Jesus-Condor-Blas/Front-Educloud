@@ -1,7 +1,12 @@
-import type { NextConfig } from "next";
+const nextConfig = {
+  output: 'standalone',
+  images: {
+    domains: ['localhost', 'example.com'],
+    unoptimized: true
+  },
+  experimental: {
+    appDir: true
+  }
+}
 
-const nextConfig: NextConfig = {
-  /* config options here */
-};
-
-export default nextConfig;
+module.exports = nextConfig
